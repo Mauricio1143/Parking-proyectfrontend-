@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Parqueadero San Antonio">
+  <main>
+    <h1 class="text-3xl font-bold text-balance text-primary">
+      Bienvenido al parqueadero <span class="text-gradient">San Antonio</span>
+    </h1>
+
+    <p class="instructions">
+      To get started, open the directory <code>src/pages</code> in your project.<br
+      />
+      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+    </p>
+    <button class="btn">Button</button>
+    <button class="btn btn-neutral">Neutral</button>
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-accent">Accent</button>
+    <button class="btn btn-ghost">Ghost</button>
+    <button class="btn btn-link">Link</button>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <button class="btn btn-primary" onclick="my_modal_1.showModal()">open modal</button>
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold">Hello!</h3>
+        <p class="py-4">Press ESC key or click the button below to close</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn btn-error error-content">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+  </main>
+</Layout>
